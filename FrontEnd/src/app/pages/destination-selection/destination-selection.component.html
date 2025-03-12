@@ -1,0 +1,44 @@
+<div
+  class="page-background"
+  [ngStyle]="{'background-image': flag ? 'url(' + flag + ')' : 'none'}"
+>
+  <div class="containerDestination">
+    <h1>Selecciona el País al Cual Quieres Viajar</h1>
+    <div class="destination">
+      <img src="/DestinationSelect.png" alt="" width="60px" />
+      <select
+        class="form-select"
+        id="countrySelect"
+        (change)="onCountryChange($event)"
+      >
+        <option value="" selected disabled>País...</option>
+        <option *ngFor="let country of countries" [value]="country.name">
+          {{ country.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="destination" *ngIf="selectedCountry">
+      <h1>Selecciona la Ciudad</h1>
+
+      <select
+        class="form-select"
+        id="citySelect"
+        (change)="onCityChange($event)"
+      >
+        <option value="" selected disabled>Ciudad...</option>
+        <option *ngFor="let city of selectedCountry.cities" [value]="city">
+          {{ city }}
+        </option>
+      </select>
+    </div>
+
+    <button
+      class="btn btn-primary"
+      [disabled]="!selectedCity"
+      (click)="goToNextPage()"
+    >
+      Siguiente
+    </button>
+  </div>
+</div>

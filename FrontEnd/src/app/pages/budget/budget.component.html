@@ -1,0 +1,58 @@
+<div
+  class="containerBudget"
+  [ngStyle]="{'background-image':'url('+flag+')',
+  'background-position':'center',
+  'background-repeat':'no-repeat',
+
+}"
+>
+  <h1>Digite el Monto de Presupuesto Adquirido</h1>
+  <div class="animation-container">
+    <img
+      *ngIf="currentPlane === 'takeoff'"
+      src="/DestinationSelect.png"
+      alt="Avión Despegando"
+      class="plane takeoff"
+    />
+    <img
+      *ngIf="currentPlane === 'flying'"
+      src="Destinationpresupuesto.png"
+      alt="Avión Volando"
+      class="plane flying"
+    />
+    <img
+      *ngIf="currentPlane === 'landing'"
+      src="llegada.png"
+      alt="Avión Aterrizando"
+      class="plane landing"
+    />
+  </div>
+  <div class="input-group">
+    <form class="form-floating">
+      <input
+        type="number"
+        class="form-control"
+        id="floatingInputValue"
+        placeholder="Presupuesto"
+        (change)="onBudgetChange($event)"
+        aria-label="Dollar amount (with dot and two decimal places)"
+      />
+      <label for="floatingInputValue">Presupuesto</label>
+    </form>
+    <span class="input-group-text">$</span>
+    <span class="input-group-text">COP</span>
+  </div>
+  <SPAN>evita poner ( . - ,)</SPAN>
+  <div>
+    <a href="/destination-selection">
+      <button class="btn btn-primary">Volver</button>
+    </a>
+    <button
+      class="btn btn-primary"
+      [disabled]="!budget"
+      (click)="gotonextpage()"
+    >
+      siguiente
+    </button>
+  </div>
+</div>

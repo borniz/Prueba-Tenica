@@ -1,0 +1,33 @@
+body {
+    background-image: url('/fondo\ Destiantion-Select.png');
+    background-size: contain; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 1024px) {
+    body {
+        background-image: url('/fondo\ Destiantion-Select\ R\ 1024.png');
+        background-size: contain; /* Evita cortes en dispositivos pequeños */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('/fondo\ Destiantion-Select\ R\ 768.png');
+        background-size: cover; /* Mantiene la imagen cubriendo el fondo */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: url('/fondo\ Destiantion-Select\ R\ 480.png');
+        background-size: contain; /* Evita que la imagen se deforme */
+    }
+}

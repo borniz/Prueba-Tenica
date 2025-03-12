@@ -1,0 +1,76 @@
+.containerBudget{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    margin-top: 30vh;
+    height: auto;
+    text-align: center;
+}
+h1{
+    font-size: 1.3rem;
+}
+.input-group{
+    margin-top: 5vh;
+}
+.form-control{
+    text-align: center;
+}
+.btn{
+    position:relative;
+    margin-left: 2vh;
+    bottom:-5vh;
+}
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .plane {
+    position: absolute;
+    width: 200px;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  .takeoff {
+    opacity: 1;
+  }
+  
+  .flying {
+    opacity: 1;
+  }
+  
+  .landing {
+    opacity: 1;
+  }
+  @media (max-width:1024px) {
+    h1,.form-control,.btn{
+        font-size: 1.5rem;
+    }
+  }
+  @media (max-width:770px) {
+    h1,.form-control,.btn{
+        font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .containerBudget{
+        width: 60%;
+        padding: 10px;
+    }
+      .plane {
+          position: absolute;
+          width: 150px;
+          transition: opacity 1s ease-in-out, transform 2s ease-in-out;
+        }
+    h1{
+        font-size: 1.3rem;
+    }
+  }

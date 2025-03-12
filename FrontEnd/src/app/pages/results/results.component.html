@@ -1,0 +1,49 @@
+<div class="containerResult">
+  <h1>Los datos del pais son los siguientes</h1>
+  <div class="cityCountryResult">
+    <label
+      type="text"
+      class="form-control"
+      aria-label="Dollar amount (with dot and two decimal places)"
+      >{{ this.country }}</label
+    >
+    <label
+      type="text"
+      class="form-control"
+      aria-label="Dollar amount (with dot and two decimal places)"
+      >{{ this.city }}</label
+    >
+  </div>
+  <div class="cityCountryResult">
+    <label
+      type="text"
+      class="form-control"
+      aria-label="Dollar amount (with dot and two decimal places)"
+      >La Moneda Local es: {{ this.currency }}</label
+    >
+    <label
+      type="text"
+      class="form-control"
+      aria-label="Dollar amount (with dot and two decimal places)"
+      >El Simbolo de la Moneda Local es: {{ this.currencySymbol }}</label
+    >
+  </div>
+  <div class="cityCountryResult"></div>
+  <div class="weatherResult" *ngIf="weather">
+    <h2>Clima en {{ city }}</h2>
+    <p>Temperatura: {{ weather.temp }}°C</p>
+    <p>Sensación térmica: {{ weather.feels_like }}°C</p>
+    <p>Condición: {{ weather.description }}</p>
+    <img [src]="weather.icon" alt="Icono del clima" />
+  </div>
+
+  <div class="cityCountryResult">
+    <p>
+      la operacion del Cambio es <br />
+      {{ this.budget }} COP * {{ this.change }} = {{ this.currencyExChange }}
+    </p>
+  </div>
+  <a href="/destination-selection">
+    <button class="btn btn-primary">Volver al Inicio</button>
+  </a>
+</div>
