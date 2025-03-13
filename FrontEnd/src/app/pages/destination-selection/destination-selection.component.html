@@ -14,7 +14,7 @@
         id="countrySelect"
         (change)="onCountryChange($event)"
       >
-        <option value="" selected disabled>País...</option>
+        <option value="" selected disabled>{{'DESTINATION_PAGE.COUNTRY'|translate}}...</option>
         <option *ngFor="let country of countries" [value]="country.name">
           {{ country.name }}
         </option>
@@ -29,7 +29,7 @@
         id="citySelect"
         (change)="onCityChange($event)"
       >
-        <option value="" selected disabled>Ciudad...</option>
+        <option value="" selected disabled>{{'DESTINATION_PAGE.CITY'|translate}}...</option>
         <option *ngFor="let city of selectedCountry.cities" [value]="city">
           {{ city }}
         </option>

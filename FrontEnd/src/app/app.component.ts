@@ -14,7 +14,7 @@ export class AppComponent {
   planes = ['1', '2', '3', '4'];
   index = 0;
   screenSize: string = 'desktop';
-
+  currentLang: string = 'es';
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['es', 'de']);
     this.translate.setDefaultLang('es');

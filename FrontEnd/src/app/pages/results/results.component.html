@@ -31,7 +31,7 @@
 
   <div class="weatherResult" *ngIf="weather">
     <h2>{{'RESULTS_PAGE.WEATHER'|translate}} {{ city }}</h2>
-    <p>Condición: {{ weather.description }}</p>
+    <p>{{'RESULTS_PAGE.CONDITION'|translate}}: {{ weather.description }}</p>
     <p>{{'RESULTS_PAGE.TEMP'|translate}}: {{ weather.temp }}°C</p>
   </div>
 
