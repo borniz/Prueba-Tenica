@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-budget',
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './budget.component.html',
   styleUrl: './budget.component.css',
 })

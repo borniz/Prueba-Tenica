@@ -6,7 +6,7 @@
 
 }"
 >
-  <h1>Digite el Monto de Presupuesto Adquirido</h1>
+  <h1>{{'BUDGET_PAGE.TITLE'|translate}}</h1>
   <div class="animation-container">
     <img
       *ngIf="currentPlane === 'takeoff'"
@@ -37,22 +37,22 @@
         (change)="onBudgetChange($event)"
         aria-label="Dollar amount (with dot and two decimal places)"
       />
-      <label for="floatingInputValue">Presupuesto</label>
+      <label for="floatingInputValue">{{'BUDGET_PAGE.PLACEHOLDER'|translate}}</label>
     </form>
     <span class="input-group-text">$</span>
     <span class="input-group-text">COP</span>
   </div>
-  <SPAN>evita poner ( . - ,)</SPAN>
+  <SPAN>{{'BUDGET_PAGE.AVOID'|translate}}</SPAN>
   <div>
     <a href="/destination-selection">
-      <button class="btn btn-primary">Volver</button>
+      <button class="btn btn-primary">{{'BUDGET_PAGE.BACK'|translate}}</button>
     </a>
     <button
       class="btn btn-primary"
       [disabled]="!budget"
       (click)="gotonextpage()"
     >
-      siguiente
+      {{'BUDGET_PAGE.NEXT'|translate}}
     </button>
   </div>
 </div>

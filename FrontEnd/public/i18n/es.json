@@ -1,0 +1,30 @@
+{
+    "MENU": {
+      "HOME": "Inicio",
+      "DESTINATION": "Destino",
+      "BUDGET": "Presupuesto",
+      "RESULTS": "Resultados"
+    },
+    "BUDGET_PAGE": {
+      "TITLE": "Digite el Monto de Presupuesto Adquirido",
+      "PLACEHOLDER": "Presupuesto",
+      "AVOID": "Evita poner ( . - , )",
+      "BACK": "Volver",
+      "NEXT": "Siguiente"
+    },
+    "DESTINATION_PAGE": {
+      "SELECT_COUNTRY": "Selecciona el País al Cual Quieres Viajar",
+      "SELECT_CITY": "Selecciona la Ciudad",
+      "NEXT": "Siguiente"
+    },
+    "RESULTS_PAGE": {
+      "TITLE": "Los datos del país son los siguientes",
+      "CURRENCY": "La Moneda Local es:",
+      "CURRENCY_SYMBOL": "El Símbolo de la Moneda Local es:",
+      "WEATHER": "Clima en",
+      "TEMP": "Temperatura:",
+      "EXCHANGE": "La operación del Cambio es",
+      "BACK_HOME": "Volver al Inicio"
+    }
+  }
+  

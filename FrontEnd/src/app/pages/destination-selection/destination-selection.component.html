@@ -6,7 +6,7 @@
   }"
 >
   <div class="containerDestination">
-    <h1>Selecciona el País al Cual Quieres Viajar</h1>
+    <h1>{{'DESTINATION_PAGE.SELECT_COUNTRY'|translate}}</h1>
     <div class="destination">
       <img src="/DestinationSelect.png" alt="" width="60px" />
       <select
@@ -22,7 +22,7 @@
     </div>
 
     <div class="destination" *ngIf="selectedCountry">
-      <h1>Selecciona la Ciudad</h1>
+      <h1>{{'DESTINATION_PAGE.SELECT_CITY'|translate}}</h1>
 
       <select
         class="form-select"
@@ -41,7 +41,7 @@
       [disabled]="!selectedCity"
       (click)="goToNextPage()"
     >
-      Siguiente
+    {{'DESTINATION_PAGE.NEXT'|translate}}
     </button>
   </div>
 </div>

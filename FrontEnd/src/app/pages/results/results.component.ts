@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WeatherService } from '../../services/weather.service';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-results',
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './results.component.html',
   styleUrl: './results.component.css',
 })

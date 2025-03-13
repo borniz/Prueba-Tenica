@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-destination-selection',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,TranslateModule],
   templateUrl: './destination-selection.component.html',
   styleUrl: './destination-selection.component.css',
 })

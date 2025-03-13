@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -14,7 +15,12 @@ export class AppComponent {
   index = 0;
   screenSize: string = 'desktop';
 
-  constructor() {
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['es', 'de']);
+    this.translate.setDefaultLang('es');
+
+    const browserLang = this.translate.getBrowserLang();
+    this.translate.use(browserLang?.match(/es|de/) ? browserLang : 'es');
     this.updateScreenSize();
     this.startAnimation();
   }
@@ -31,7 +37,9 @@ export class AppComponent {
       this.screenSize = 'desktop';
     }
   }
-
+  changeLanguage(lang: string) {
+    this.translate.use(lang);
+  }
   startAnimation() {
     setInterval(() => {
       this.index = (this.index + 1) % this.planes.length;

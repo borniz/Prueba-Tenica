@@ -1,0 +1,30 @@
+{
+    "MENU": {
+      "HOME": "Startseite",
+      "DESTINATION": "Reiseziel",
+      "BUDGET": "Budget",
+      "RESULTS": "Ergebnisse"
+    },
+    "BUDGET_PAGE": {
+      "TITLE": "Geben Sie den erworbenen Budgetbetrag ein",
+      "PLACEHOLDER": "Budget",
+      "AVOID": "Vermeiden Sie ( . - , )",
+      "BACK": "Zurück",
+      "NEXT": "Weiter"
+    },
+    "DESTINATION_PAGE": {
+      "SELECT_COUNTRY": "Wählen Sie das Land aus, in das Sie reisen möchten",
+      "SELECT_CITY": "Wählen Sie die Stadt aus",
+      "NEXT": "Weiter"
+    },
+    "RESULTS_PAGE": {
+      "TITLE": "Die Daten des Landes sind wie folgt",
+      "CURRENCY": "Die Landeswährung ist:",
+      "CURRENCY_SYMBOL": "Das Symbol der Landeswährung ist:",
+      "WEATHER": "Wetter in",
+      "TEMP": "Temperatur:",
+      "EXCHANGE": "Die Umrechnungsoperation ist",
+      "BACK_HOME": "Zurück zum Start"
+    }
+  }
+  
