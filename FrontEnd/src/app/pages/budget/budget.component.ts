@@ -27,7 +27,7 @@ export class BudgetComponent {
     setInterval(() => {
       this.index = (this.index + 1) % this.planes.length;
       this.currentPlane = this.planes[this.index];
-    }, 2000); // Cambia la imagen cada 3 segundos
+    }, 2000); 
   }
 
   onBudgetChange(event: any) {

@@ -1,6 +1,9 @@
 <div
   class="page-background"
-  [ngStyle]="{'background-image': flag ? 'url(' + flag + ')' : 'none'}"
+  [ngStyle]="{
+    'background-image': flag ? 'url(' + flag + ')' : 'none',
+    'background-repeat': 'no-repeat'
+  }"
 >
   <div class="containerDestination">
     <h1>Selecciona el País al Cual Quieres Viajar</h1>

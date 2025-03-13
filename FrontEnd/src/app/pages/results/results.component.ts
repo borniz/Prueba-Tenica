@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WeatherService } from '../../services/weather.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-results',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './results.component.html',
   styleUrl: './results.component.css',
 })
@@ -30,22 +31,27 @@ export class ResultsComponent {
       }
     });
   }
-  getWeatherData() {
-    this.weatherService.getWeather(this.city!, this.country!).subscribe(
-      (data) => {
-        this.weather = {
-          temp: data.main.temp,
-          feels_like: data.main.feels_like,
-          description: data.weather[0].description,
-          icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
-        };
-      },
-      (error) => {
-        console.error('Error obteniendo el clima:', error);
-      }
-    );
-  }
 
+  getWeatherData() {
+    if (!this.city) return;
+
+    this.weatherService.getWeather(this.city).subscribe({
+      next: (data) => {
+        if (data?.current_condition?.length > 0) {
+          this.weather = {
+            temp: data.current_condition[0].temp_C,
+            description: data.current_condition[0].weatherDesc[0].value,
+          };
+          console.log('Clima recibido:', this.weather);
+        } else {
+          console.warn('Respuesta inesperada del servicio del clima', data);
+        }
+      },
+      error: (error) => {
+        console.error('Error obteniendo el clima:', error);
+      },
+    });
+  }
   localCurrency() {
     if (!this.country) return;
 

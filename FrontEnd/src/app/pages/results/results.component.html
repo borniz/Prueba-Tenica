@@ -28,20 +28,20 @@
       >El Simbolo de la Moneda Local es: {{ this.currencySymbol }}</label
     >
   </div>
-  <div class="cityCountryResult"></div>
+
   <div class="weatherResult" *ngIf="weather">
     <h2>Clima en {{ city }}</h2>
-    <p>Temperatura: {{ weather.temp }}°C</p>
-    <p>Sensación térmica: {{ weather.feels_like }}°C</p>
     <p>Condición: {{ weather.description }}</p>
-    <img [src]="weather.icon" alt="Icono del clima" />
+    <p>Temperatura: {{ weather.temp }}°C</p>
   </div>
 
   <div class="cityCountryResult">
     <p>
       la operacion del Cambio es <br />
-      {{ this.budget }} COP * {{ this.change }} = {{ this.currencyExChange }}
+      {{ this.budget }} COP * {{ this.change }}
     </p>
+    <p>=</p>
+    <h5>{{ this.currencyExChange }}{{ this.currencySymbol }}</h5>
   </div>
   <a href="/destination-selection">
     <button class="btn btn-primary">Volver al Inicio</button>

@@ -1,2 +1,15 @@
+<div class="animation-container">
+  <img
+    *ngFor="let plane of planes"
+    [src]="getImagePath(plane)"
+    [alt]="'Avión ' + plane"
+    class="plane"
+    [ngClass]="{
+      visible: currentPlane === plane,
+      hidden: currentPlane !== plane
+    }"
+  />
+</div>
 
-<router-outlet />
+<router-outlet></router-outlet>
+

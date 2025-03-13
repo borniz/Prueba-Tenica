@@ -20,7 +20,7 @@
     .containerResult{
         width: 60%;
         padding: 10px;
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
     .cityCountryResult{
         margin: 1vh;
@@ -63,5 +63,10 @@
 }
 .cityCountryResult{
     margin: 1vh;
+    font-size: 1rem;
+}
+.form-control{
+    margin:1vh;
+    font-size: 1rem;
 }
 }

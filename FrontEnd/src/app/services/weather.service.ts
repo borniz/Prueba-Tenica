@@ -6,13 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiKey = 'T4bd69494477427768f501a878cdf63a8'; 
-  private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
+  private apiKey = 'yarodBonilla';
+  private apiUrl = 'https://wttr.in';
 
   constructor(private http: HttpClient) {}
 
-  getWeather(city: string, countryCode: string): Observable<any> {
-    const url = `${this.apiUrl}?q=${city},${countryCode}&appid=${this.apiKey}&units=metric&lang=es`;
-    return this.http.get(url);
+  getWeather(city: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${city}?format=j1`);
   }
 }
