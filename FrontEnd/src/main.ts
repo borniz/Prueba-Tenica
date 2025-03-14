@@ -30,5 +30,6 @@ bootstrapApplication(AppComponent, {
       },
     }).providers!,
     TranslateService,
+    provideHttpClient(),
   ],
 }).catch((err) => console.error(err));

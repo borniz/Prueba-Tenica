@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-record',
-  imports: [CommonModule,TranslateModule,],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './record.component.html',
   styleUrl: './record.component.css',
 })
@@ -21,7 +21,9 @@ export class RecordComponent {
   }
   getHistory() {
     this.apiService.gethistorial().subscribe((data) => {
-      this.history = data.data;
+      if (data.data && Array.isArray(data.data)) {
+        this.history = data.data.slice(-5); // Obtiene solo los últimos 5 registros
+      }
     });
   }
 }

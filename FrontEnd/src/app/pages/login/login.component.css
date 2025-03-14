@@ -1,0 +1,15 @@
+.containerLogin{
+
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        margin-top: 30vh;
+        height: auto;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}

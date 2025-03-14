@@ -42,5 +42,9 @@
     "EXCHANGE_RATE": "Cambio de Moneda",
     "CONVERTED_BUDGET": "Conversion",
     "BACK_HOME": "Volver al Inicio"
+  },
+  "APP_COMPONENT":{
+    "TITLE": "Aplicación de Viajes",
+    "EXIT":"Salir"
   }
 }

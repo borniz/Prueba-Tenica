@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,12 @@ export class AppComponent {
   index = 0;
   screenSize: string = 'desktop';
   currentLang: string = 'es';
-  constructor(private translate: TranslateService) {
+  showNavbar = true;
+  constructor(
+    private translate: TranslateService,
+    private router: Router,
+    private authService: AuthService
+  ) {
     this.translate.addLangs(['es', 'de']);
     this.translate.setDefaultLang('es');
 
@@ -23,6 +29,9 @@ export class AppComponent {
     this.translate.use(browserLang?.match(/es|de/) ? browserLang : 'es');
     this.updateScreenSize();
     this.startAnimation();
+    this.router.events.subscribe(() => {
+      this.showNavbar = !['/login', '/register'].includes(this.router.url);
+    });
   }
 
   @HostListener('window:resize', [])
@@ -57,5 +66,11 @@ export class AppComponent {
     }
 
     return `/${baseName}${plane}.png`;
+  }
+
+  logout() {
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['/login']);
+    });
   }
 }

@@ -3,7 +3,6 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">{{ "RECORD_PAGE.COUNTRY" | translate }}</th>
         <th scope="col">{{ "RECORD_PAGE.CITY" | translate }}</th>
         <th scope="col">{{ "RECORD_PAGE.CURRENCY" | translate }}</th>
@@ -17,7 +16,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of history">
-        <th scope="row">{{ item.id }}</th>
         <td>{{ item.country }}</td>
         <td>{{ item.city }}</td>
         <td>{{ item.currency }}</td>
@@ -30,9 +28,9 @@
       </tr>
     </tbody>
   </table>
-  <a href="/"
+  <a href="/destination-selection"
     ><button class="btn btn-primary">
-      {{ "RECORD_PAGES" | translate }}
+      {{ "RECORD_PAGE.BACK_HOME" | translate }}
     </button></a
   >
 </div>

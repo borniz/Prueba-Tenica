@@ -106,7 +106,7 @@ export class ResultsComponent {
     this.apiservice.postquery(data).subscribe({
       next: () => {
         console.log('Registro guardado correctamente');
-        this.router.navigate(['/']);
+        this.router.navigate(['/destination-selection']);
       },
       error: (error) => {
         console.error('Error guardando el registro:', error);

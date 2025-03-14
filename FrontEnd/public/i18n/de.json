@@ -42,5 +42,9 @@
     "EXCHANGE_RATE": "Währungsumtausch",
     "CONVERTED_BUDGET": "Umrechnung",
     "BACK_HOME": "Zurück zur Startseite"
+  },
+  "APP_COMPONENT": {
+    "TITLE": "Reiseantrag",
+    "EXIT": "Beenden"
   }
 }
