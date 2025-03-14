@@ -1,0 +1,29 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS viajes;
+USE viajes;
+
+-- Crear la tabla historial_consultas
+CREATE TABLE IF NOT EXISTS historial_consultas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    country VARCHAR(100) NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    budget DECIMAL(10,2) NOT NULL,
+    currency VARCHAR(10) NOT NULL,
+    currency_symbol VARCHAR(10) NOT NULL,
+    climate VARCHAR(50) NOT NULL,
+    temp VARCHAR(10) NOT NULL,
+    exchange_rate DECIMAL(10,4) NOT NULL,
+    converted_budget DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Insertar datos de ejemplo
+INSERT INTO historial_consultas (country, city, budget, currency, currency_symbol, climate, temp, exchange_rate, converted_budget)
+VALUES
+    ('Inglaterra', 'Londres', 1500.00, 'GBP', '£', 'Nublado', '12°C', 1.2500, 1875.00),
+    ('India', 'Nueva Delhi', 2000.00, 'INR', '₹', 'Soleado', '35°C', 0.0120, 24.00),
+    ('Japón', 'Tokio', 3000.00, 'JPY', '¥', 'Lluvioso', '20°C', 0.0065, 19.50);
+
+-- Verificar que los datos fueron insertados correctamente
+SELECT * FROM historial_consultas;
