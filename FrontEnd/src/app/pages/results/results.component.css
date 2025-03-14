@@ -56,10 +56,16 @@
 }
 @media (max-width: 480px){
 .containerResult{
-    margin-top:20vh;
-    width: 73%;
+    margin-top:15vh;
+    width: 75%;
     padding: 10px;
-    font-size: 1rem;
+    font-size: .8rem;
+}
+h1{
+    font-size: 1.5rem;
+}
+h5{
+    font-size: 1.3rem;
 }
 .cityCountryResult{
     margin: 1vh;

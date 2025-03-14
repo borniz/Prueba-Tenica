@@ -23,15 +23,15 @@
   "RESULTS_PAGE": {
     "TITLE": "Los datos del país son los siguientes",
     "CURRENCY": "La Moneda Local es:",
-    "CURRENCY_SYMBOL": "El Símbolo de la Moneda Local es:",
+    "CURRENCY_SYMBOL": "El Símbolo es:",
     "WEATHER": "Clima en",
     "CONDITION": "Condicion",
     "TEMP": "Temperatura:",
-    "EXCHANGE": "La operación del Cambio es",
+    "EXCHANGE": "Cambio es",
     "BACK_HOME": "Volver al Inicio"
   },
   "RECORD_PAGE": {
-    "TITLE":"Historial de Viajes",
+    "TITLE": "Historial de Viajes",
     "COUNTRY": "País",
     "CITY": "Ciudad",
     "BUDGET": "Presupuesto",
@@ -43,8 +43,8 @@
     "CONVERTED_BUDGET": "Conversion",
     "BACK_HOME": "Volver al Inicio"
   },
-  "APP_COMPONENT":{
+  "APP_COMPONENT": {
     "TITLE": "Aplicación de Viajes",
-    "EXIT":"Salir"
+    "EXIT": "Salir"
   }
 }

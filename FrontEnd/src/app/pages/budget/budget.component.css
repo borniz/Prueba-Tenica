@@ -23,33 +23,9 @@ h1{
     margin-left: 2vh;
     bottom:-5vh;
 }
-.animation-container {
-    position: relative;
-    width: 100%;
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+
   
-  .plane {
-    position: absolute;
-    width: 200px;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  }
-  
-  .takeoff {
-    opacity: 1;
-  }
-  
-  .flying {
-    opacity: 1;
-  }
-  
-  .landing {
-    opacity: 1;
-  }
+
   @media (max-width:1024px) {
     h1,.form-control,.btn{
         font-size: 1.5rem;
@@ -63,12 +39,11 @@ h1{
   @media (max-width: 480px) {
     .containerBudget{
         width: 70%;
-        padding: 10px;
+        padding: 5px;
     }
       .plane {
           position: absolute;
           width: 150px;
-          transition: opacity 1s ease-in-out, transform 2s ease-in-out;
         }
     h1{
         font-size: 1.3rem;

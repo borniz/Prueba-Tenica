@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-budget',
-  imports: [CommonModule,TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './budget.component.html',
   styleUrl: './budget.component.css',
 })
@@ -22,14 +22,8 @@ export class BudgetComponent {
       this.country = params['country'];
       this.city = params['city'];
     });
-    this.startAnimation();
   }
-  startAnimation() {
-    setInterval(() => {
-      this.index = (this.index + 1) % this.planes.length;
-      this.currentPlane = this.planes[this.index];
-    }, 2000); 
-  }
+
 
   onBudgetChange(event: any) {
     this.budget = event.target.value;

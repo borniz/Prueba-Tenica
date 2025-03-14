@@ -23,11 +23,11 @@
   "RESULTS_PAGE": {
     "TITLE": "Die Daten des Landes sind wie folgt",
     "CURRENCY": "Die Landeswährung ist:",
-    "CURRENCY_SYMBOL": "Das Symbol der Landeswährung ist:",
+    "CURRENCY_SYMBOL": "Das Symbol ist:",
     "WEATHER": "Wetter in",
     "CONDITION": "Zustand",
     "TEMP": "Temperatur:",
-    "EXCHANGE": "Die Umrechnungsoperation ist",
+    "EXCHANGE": "Veränderung ist",
     "BACK_HOME": "Zurück zum Start"
   },
   "RECORD_PAGE": {

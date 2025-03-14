@@ -4,6 +4,7 @@ import { WeatherService } from '../../services/weather.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ApiService } from '../../service/api.service';
+import { CurrencyService } from '../../services/currency.service';
 
 @Component({
   selector: 'app-results',
@@ -20,7 +21,6 @@ export class ResultsComponent {
   currencyExChange: number | null = null;
   change: number | null = null;
   weather: any = null;
-
   private weatherService = inject(WeatherService);
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +30,7 @@ export class ResultsComponent {
     this.route.queryParams.subscribe((params) => {
       this.city = params['city'];
       this.country = params['country'];
-      this.budget = params['budget'];
+      this.budget = Number(params['budget']);
       this.localCurrency();
       if (this.city && this.country) {
         this.getWeatherData();
@@ -60,31 +60,30 @@ export class ResultsComponent {
   }
   localCurrency() {
     if (!this.country) return;
-
     switch (this.country) {
       case 'Inglaterra':
         this.currency = 'Libra Esterlina';
         this.currencySymbol = '£';
-        this.change = 5355.17;
-        this.currencyExChange = this.budget * this.change;
+        this.change = 0.00019;
+        this.currencyExChange = Number((this.budget * this.change).toFixed(2));
         break;
       case 'Japón':
         this.currency = 'Yen';
         this.currencySymbol = '¥';
         this.change = 0.036;
-        this.currencyExChange = this.budget * this.change;
+        this.currencyExChange = Number((this.budget * this.change).toFixed(2));
         break;
       case 'India':
         this.currency = 'Rupias Indias';
         this.currencySymbol = '₹';
         this.change = 0.02124;
-        this.currencyExChange = this.budget * this.change;
+        this.currencyExChange = Number((this.budget * this.change).toFixed(2));
         break;
       case 'Dinamarca':
         this.currency = 'Corona danesa';
         this.currencySymbol = 'kr';
         this.change = 0.0017;
-        this.currencyExChange = this.budget * this.change;
+        this.currencyExChange = Number((this.budget * this.change).toFixed(2));
         break;
       default:
         console.error('País no reconocido:', this.country);

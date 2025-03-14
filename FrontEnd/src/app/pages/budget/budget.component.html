@@ -6,27 +6,8 @@
 
 }"
 >
-  <h1>{{'BUDGET_PAGE.TITLE'|translate}}</h1>
-  <div class="animation-container">
-    <img
-      *ngIf="currentPlane === 'takeoff'"
-      src="/DestinationSelect.png"
-      alt="Avión Despegando"
-      class="plane takeoff"
-    />
-    <img
-      *ngIf="currentPlane === 'flying'"
-      src="Destinationpresupuesto.png"
-      alt="Avión Volando"
-      class="plane flying"
-    />
-    <img
-      *ngIf="currentPlane === 'landing'"
-      src="llegada.png"
-      alt="Avión Aterrizando"
-      class="plane landing"
-    />
-  </div>
+  <h1>{{ "BUDGET_PAGE.TITLE" | translate }}</h1>
+  
   <div class="input-group">
     <form class="form-floating">
       <input
@@ -37,22 +18,26 @@
         (change)="onBudgetChange($event)"
         aria-label="Dollar amount (with dot and two decimal places)"
       />
-      <label for="floatingInputValue">{{'BUDGET_PAGE.PLACEHOLDER'|translate}}</label>
+      <label for="floatingInputValue">{{
+        "BUDGET_PAGE.PLACEHOLDER" | translate
+      }}</label>
     </form>
     <span class="input-group-text">$</span>
     <span class="input-group-text">COP</span>
   </div>
-  <SPAN>{{'BUDGET_PAGE.AVOID'|translate}}</SPAN>
+  <SPAN>{{ "BUDGET_PAGE.AVOID" | translate }}</SPAN>
   <div>
     <a href="/destination-selection">
-      <button class="btn btn-primary">{{'BUDGET_PAGE.BACK'|translate}}</button>
+      <button class="btn btn-primary">
+        {{ "BUDGET_PAGE.BACK" | translate }}
+      </button>
     </a>
     <button
       class="btn btn-primary"
       [disabled]="!budget"
       (click)="gotonextpage()"
     >
-      {{'BUDGET_PAGE.NEXT'|translate}}
+      {{ "BUDGET_PAGE.NEXT" | translate }}
     </button>
   </div>
 </div>
