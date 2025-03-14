@@ -1,0 +1,77 @@
+.gethistory {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 30vh;
+    height: auto;
+    text-align: center;
+    overflow-x: auto; /* Permite desplazamiento horizontal en móviles */
+  }
+  
+  /* Ajuste de la tabla para evitar desbordes */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .table thead {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* 📱 Móviles (máx. 480px) */
+  @media (max-width: 480px) {
+    .gethistory {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    
+    .table th, .table td {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+  
+  /* 📱 Tablets Pequeñas (máx. 770px) */
+  @media (max-width: 770px) {
+    .gethistory {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .table th, .table td {
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+  
+  /* 💻 Tablets Grandes / Laptops Pequeñas (máx. 1024px) */
+  @media (max-width: 1024px) {
+    .gethistory {
+      width: 80%;
+    }
+  
+    .table th, .table td {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,5 +1,5 @@
 <div class="containerResult">
-  <h1>{{'RESULTS_PAGE.TITLE'|translate}}</h1>
+  <h1>{{ "RESULTS_PAGE.TITLE" | translate }}</h1>
   <div class="cityCountryResult">
     <label
       type="text"
@@ -19,31 +19,33 @@
       type="text"
       class="form-control"
       aria-label="Dollar amount (with dot and two decimal places)"
-      >{{'RESULTS_PAGE.CURRENCY'|translate}}: {{ this.currency }}</label
+      >{{ "RESULTS_PAGE.CURRENCY" | translate }}: {{ this.currency }}</label
     >
     <label
       type="text"
       class="form-control"
       aria-label="Dollar amount (with dot and two decimal places)"
-      >{{'RESULTS_PAGE.CURRENCY_SYMBOL'|translate}}: {{ this.currencySymbol }}</label
+      >{{ "RESULTS_PAGE.CURRENCY_SYMBOL" | translate }}:
+      {{ this.currencySymbol }}</label
     >
   </div>
 
   <div class="weatherResult" *ngIf="weather">
-    <h2>{{'RESULTS_PAGE.WEATHER'|translate}} {{ city }}</h2>
-    <p>{{'RESULTS_PAGE.CONDITION'|translate}}: {{ weather.description }}</p>
-    <p>{{'RESULTS_PAGE.TEMP'|translate}}: {{ weather.temp }}°C</p>
+    <h2>{{ "RESULTS_PAGE.WEATHER" | translate }} {{ city }}</h2>
+    <p>{{ "RESULTS_PAGE.CONDITION" | translate }}: {{ weather.description }}</p>
+    <p>{{ "RESULTS_PAGE.TEMP" | translate }}: {{ weather.temp }}°C</p>
   </div>
 
   <div class="cityCountryResult">
     <p>
-      {{'RESULTS_PAGE.EXCHANGE'|translate}} <br />
+      {{ "RESULTS_PAGE.EXCHANGE" | translate }} <br />
       {{ this.budget }} COP * {{ this.change }}
     </p>
     <p>=</p>
     <h5>{{ this.currencyExChange }}{{ this.currencySymbol }}</h5>
   </div>
-  <a href="/destination-selection">
-    <button class="btn btn-primary">{{'RESULTS_PAGE.BACK_HOME'|translate}}</button>
-  </a>
+
+  <button class="btn btn-primary" (click)="postRecord()">
+    {{ "RESULTS_PAGE.BACK_HOME" | translate }}
+  </button>
 </div>

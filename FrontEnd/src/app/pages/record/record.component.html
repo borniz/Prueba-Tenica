@@ -1,0 +1,38 @@
+<div class="gethistory">
+  <h1>{{ "RECORD_PAGE.TITLE" | translate }}</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{{ "RECORD_PAGE.COUNTRY" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.CITY" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.CURRENCY" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.CURRENCY_SYMBOL" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.CLIMATE" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.TEMP" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.BUDGET" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.CONVERTED_BUDGET" | translate }}</th>
+        <th scope="col">{{ "RECORD_PAGE.EXCHANGE_RATE" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of history">
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.country }}</td>
+        <td>{{ item.city }}</td>
+        <td>{{ item.currency }}</td>
+        <td>{{ item.currency_symbol }}</td>
+        <td>{{ item.climate }}</td>
+        <td>{{ item.temp }}</td>
+        <td>{{ item.budget }} COP</td>
+        <td>{{ item.converted_budget }}</td>
+        <td>{{ item.exchange_rate }} {{ item.currency_symbol }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="/"
+    ><button class="btn btn-primary">
+      {{ "RECORD_PAGES" | translate }}
+    </button></a
+  >
+</div>

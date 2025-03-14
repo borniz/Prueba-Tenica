@@ -3,7 +3,8 @@
     "HOME": "Startseite",
     "DESTINATION": "Reiseziel",
     "BUDGET": "Budget",
-    "RESULTS": "Ergebnisse"
+    "RESULTS": "Ergebnisse",
+    "RECORD": "Geschichte"
   },
   "BUDGET_PAGE": {
     "TITLE": "Geben Sie den erworbenen Budgetbetrag ein",
@@ -28,5 +29,18 @@
     "TEMP": "Temperatur:",
     "EXCHANGE": "Die Umrechnungsoperation ist",
     "BACK_HOME": "Zurück zum Start"
+  },
+  "RECORD_PAGE": {
+    "TITLE": "Reiseverlauf",
+    "COUNTRY": "Land",
+    "CITY": "Stadt",
+    "BUDGET": "Budget",
+    "CURRENCY": "Lokale Währung",
+    "CURRENCY_SYMBOL": "Währungssymbol",
+    "CLIMATE": "Klimabedingungen",
+    "TEMP": "Temperatur:",
+    "EXCHANGE_RATE": "Währungsumtausch",
+    "CONVERTED_BUDGET": "Umrechnung",
+    "BACK_HOME": "Zurück zur Startseite"
   }
 }

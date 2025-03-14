@@ -1,12 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, TemplateRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WeatherService } from '../../services/weather.service';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-results',
-  imports: [CommonModule,TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './results.component.html',
   styleUrl: './results.component.css',
 })
@@ -21,7 +22,11 @@ export class ResultsComponent {
   weather: any = null;
 
   private weatherService = inject(WeatherService);
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private apiservice: ApiService
+  ) {
     this.route.queryParams.subscribe((params) => {
       this.city = params['city'];
       this.country = params['country'];
@@ -85,5 +90,27 @@ export class ResultsComponent {
         console.error('País no reconocido:', this.country);
         return;
     }
+  }
+  postRecord() {
+    const data = {
+      country: this.country,
+      city: this.city,
+      currency: this.currency,
+      currency_symbol: this.currencySymbol,
+      climate: this.weather.description,
+      temp: this.weather.temp + '°C',
+      budget: Number(this.budget),
+      exchange_rate: Number(this.currencyExChange),
+      converted_budget: Number(this.change),
+    };
+    this.apiservice.postquery(data).subscribe({
+      next: () => {
+        console.log('Registro guardado correctamente');
+        this.router.navigate(['/']);
+      },
+      error: (error) => {
+        console.error('Error guardando el registro:', error);
+      },
+    });
   }
 }
